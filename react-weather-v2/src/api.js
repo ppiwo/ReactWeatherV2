@@ -13,7 +13,6 @@ export async function translateIp(){
 }
 
 export let makeWeatherRequest = async (lat,long) => {
-    console.log('dewd')
     return await axios.get('https://api.openweathermap.org/data/2.5/onecall?', {
         params: {
             lat: String(lat),

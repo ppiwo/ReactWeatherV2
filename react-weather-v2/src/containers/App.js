@@ -19,11 +19,9 @@ export default function App() {
   let getLocation = () => {
     if (userLocation.lat === -1) {
       if ("geolocation" in navigator) {
-        console.log("Available");
         navigator.geolocation.getCurrentPosition(async function(position) {
           let lat = position.coords.latitude;
           let long = position.coords.longitude;
-          console.log(lat)
           setLocation({lat: lat, long: long})
         });
       } 
